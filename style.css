@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "freight big pro";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 99;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* display: none; */
+}
+
+.loader h1 {
+    font-size: 6.9vw;
+    line-height: 5vw;
+    font-weight: 100;
+    letter-spacing: -.2vw;
+    position: relative;
+    z-index: 8;
+}
+
+.yellow1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #f5E41B;
+    position: absolute;
+    z-index: 8;
+}
+
+.yellow2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #f5E41B;
+    position: absolute;
+    z-index: 7;
+}
+
+.loader video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: 6;
+}
+
+.nav {
+    width: 100%;
+    padding: 20px 40px;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+}
+
+.nav svg path {
+    fill: #000;
+}
+
+.main {
+    background-color: #000;
+}
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #f5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page1 h1 {
+    font-size: 6.9vw;
+    line-height: 5vw;
+    font-weight: 100;
+    letter-spacing: -.2vw;
+}
+
+.page2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.elem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+}
+
+.elem h2 {
+    font-size: 6.8vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 7;
+    line-height: 5vw;
+    cursor: pointer;
+}
+
+.elem:hover h2 {
+    color: #000;
+    font-style: italic;
+}
+
+.elem .moving {
+    width: 100%;
+    background-color: #f5E41B;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%) scaleY(0);
+    padding: .5vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+
+.elem:hover .moving {
+    transform: translate(-50%, -45%) scaleY(1);
+}
+
+.elem .blur {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, #f5e31bf5, #f5E41B, #f5e31bf8);
+    box-shadow: 10px 0 50px 20px #f5E41B, -10px 0 50px 20px #f5E41B;
+    position: absolute;
+    z-index: 9;
+}
+
+.elem .blur1 {
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(to right, #f5e31bf5, #f5E41B, #f5e31bf8);
+    box-shadow: 10px 0 50px 20px #f5E41B, -10px 0 50px 20px #f5E41B;
+    position: absolute;
+    z-index: 9;
+}
+
+.elem .moving .moving-in {
+    display: inline-block;
+    animation: moving 6s linear infinite;
+
+}
+
+.elem .moving .moving-in h5 {
+    display: inline-block;
+    font-size: 20px;
+    font-family: "gilroy";
+    font-weight: 100;
+    margin-right: 2vw;
+    color: #000;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.elem:hover .moving .moving-in h5 {
+    opacity: 1;
+}
+
+
+
+@keyframes moving {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+}
+
+.page3 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw 1.7vw;
+    padding-left: 3vw;
+}
+
+.image-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.card-image {
+    background-color: pink;
+    width: 30vw;
+    height: 38vw;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all .2s linear;
+}
+
+.card-image:hover img {
+    scale: 1.1;
+}
+
+.card-image .bcard {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.card-image .bcard p {
+    transition: all .2s linear .1s;
+    font-size: 4vw;
+    text-align: center;
+    color: #000;
+}
+
+.card-image:hover .bcard p {
+    color: #fff;
+
+}
+
+.card-image:hover .bcard {
+    opacity: 1;
+}
+
+.footer {
+    width: 100%;
+    height: 18vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .ftop {
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 2vw;
+    
+}
+
+
+
+.footer .ftop i {
+    font-size: 3vw;
+    cursor: pointer;
+}
+
+.footer .ftop h2 {
+    font-family: "gilroy";
+    font-weight: 100;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.footer .fbtm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    height: 50%;
+}
+
+.footer .fbtm .left-btm a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "gilroy";
+    font-weight: 100;
+    font-size: 1.3vw;
+}
+
+.footer .fbtm .right-btm a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "gilroy";
+    font-weight: 100;
+    padding: 0 3vw;
+}
